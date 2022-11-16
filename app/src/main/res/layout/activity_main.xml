@@ -8,23 +8,40 @@
     android:orientation="vertical">
 
 
-    <Toolbar
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
+        app:titleTextColor="@color/grey"
         android:layout_height="57dp"
         android:minHeight="?attr/actionBarSize"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tablayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:background="#2D55E3"
+        app:tabTextColor="#121858"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="bottom"/>
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+
+
+    <include layout="@layout/main_app"/>
   <!--  <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
         android:layout_width="match_parent"
@@ -33,7 +50,6 @@
         app:drawerLayoutCornerSize="20dp">
 
     </com.google.android.material.navigation.NavigationView>-->
-
 
 
 </LinearLayout>

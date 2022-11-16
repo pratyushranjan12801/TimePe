@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="4dp">
+
+
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffebee"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Username"
+                android:fontFamily="cursive"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/lastMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username"
+                android:padding="8dp"
+                android:text="Last Message"
+                android:textColor="#357a38"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!--Many times we see that texts have an image along with them to
+      their right or left. This is added with the help of the
+      drawableLeft (or drawableRight and so on) attribute-->
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profilepic"
+            android:layout_width="18dp"
+            android:layout_height="100dp"
+            android:layout_weight="1.5"
+            android:padding="5dp"
+            android:src="@drawable/default_avatar"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/RoundedImageStyle"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

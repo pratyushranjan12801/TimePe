@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_menu_search_24"
+        android:title="Search"
+        app:showAsAction="always"
+        />
+
+
+    <item
+        android:id="@+id/camera"
+        android:icon="@drawable/ic_camera"
+        app:showAsAction="always"
+        android:title="Camera" />
 
     <item
         android:id="@+id/newgroup"
@@ -16,5 +30,10 @@
         android:id="@+id/about"
         android:title="About App"
         android:icon="@drawable/ic_about"/>
+
+    <item
+        android:id="@+id/logout"
+        android:title="LogOut"
+        android:icon="@drawable/ic_baseline_logout_24"/>
 
 </menu>
