@@ -75,12 +75,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Camera Selected", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.newgroup:
-                Toast.makeText(this, "New Group Selected", Toast.LENGTH_SHORT).show();
                 Intent i1 = new Intent(MainActivity.this,GroupChatActivity.class);
                 startActivity(i1);
                 break;
             case R.id.settings:
-                Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show();
+
+                Intent  i2 = new Intent(MainActivity.this, SettingsActivity2.class);
+                startActivity(i2);
                 break;
             case R.id.about:
                 Toast.makeText(this, "About App", Toast.LENGTH_SHORT).show();
