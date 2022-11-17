@@ -1,27 +1,22 @@
 package com.prandroid.timepe.Activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.viewpager.widget.ViewPager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 import com.prandroid.timepe.Adapter.ViewPagerAdapter;
 import com.prandroid.timepe.R;
 import com.prandroid.timepe.databinding.ActivityMainBinding;
-
 
 import java.util.Objects;
 
@@ -81,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.newgroup:
                 Toast.makeText(this, "New Group Selected", Toast.LENGTH_SHORT).show();
+                Intent i1 = new Intent(MainActivity.this,GroupChatActivity.class);
+                startActivity(i1);
                 break;
             case R.id.settings:
                 Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show();

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/receiver"
     android:layout_marginStart="5dp"
     android:layout_marginTop="4dp"
@@ -10,6 +11,41 @@
     android:maxHeight="400dp"
     android:minHeight="30dp">
 
+    <TextView
+        android:id="@+id/recievertxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:maxWidth="270dp"
+        android:minWidth="50dp"
+        android:text="TextView"
+        android:inputType="textLongMessage|textMultiLine"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/recievertime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        />
 
+    <TextView
+        android:id="@+id/recievertime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="#000000"
+        android:text="12:43 pm"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
-</RelativeLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="16dp"
+        android:orientation="vertical"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

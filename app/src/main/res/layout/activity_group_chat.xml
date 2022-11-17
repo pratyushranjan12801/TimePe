@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat2"
+    tools:context=".Activity.GroupChatActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chattext"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/linearchat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="3dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearchat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/enterMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/entermessage_back"
+            android:ems="10"
+            android:textColorHint="#000000"
+            android:hint="Enter Message"
+            android:layout_weight="1"
+            android:padding="10dp"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0"
+            app:srcCompat = "@drawable/send2u"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"/>
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profilepicchat"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="5dp"
+            android:src="@drawable/default_avatar"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/RoundedImageStyle"/>
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Username"
+            android:fontFamily="cursive"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_toStartOf="@id/videocall"
+                android:src="@drawable/ic_call"/>
+            <ImageView
+                android:id="@+id/videocall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_toStartOf="@+id/menutop"
+                android:src="@drawable/ic_baseline_video_call_24"/>
+            <ImageView
+                android:id="@+id/menutop"
+                android:layout_alignParentEnd="true"
+                android:layout_width="30dp"
+                android:paddingEnd="10dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menutop"/>
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>
